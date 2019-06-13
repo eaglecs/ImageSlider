@@ -55,7 +55,7 @@ public class SliderAdapterExample extends
                         .fitCenter()
                         .into(viewHolder.imageViewBackground);
                 break;
-            case 4:
+            case 3:
                 viewHolder.textViewDescription.setText("This is slider item " + position);
                 viewHolder.textViewDescription.setTextSize(16);
                 viewHolder.textViewDescription.setTextColor(Color.WHITE);
@@ -87,7 +87,7 @@ public class SliderAdapterExample extends
     @Override
     public int getCount() {
         //slider view count could be dynamic size
-        return 4;
+        return 9;
     }
 
     class SliderAdapterVH extends SliderViewAdapter.ViewHolder {
