@@ -86,7 +86,7 @@ public class SliderInstagramIndicatorView extends FrameLayout {
 
     public void setSliderAdapter(final PagerAdapter pagerAdapter) {
         mPagerAdapter = pagerAdapter;
-        registerDataObserver();
+//        registerDataObserver();
         mSliderPager.setAdapter(pagerAdapter);
         mSliderPager.setOffscreenPageLimit(pagerAdapter.getCount() - 1);
         //setup with indicator
