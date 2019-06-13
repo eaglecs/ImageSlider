@@ -20,7 +20,7 @@ Step 1. Add the JitPack repository to your build file
 	
 Step 2. Add the dependency
 
-       implementation 'com.github.eaglecs:ImageSlider:1.0.0'
+       implementation 'com.github.eaglecs:ImageSlider:1.0.1'
 
 ### New Feautures 
 * Added new adapter based slider view, Provides the ability to add custom views
