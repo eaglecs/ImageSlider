@@ -75,6 +75,10 @@ public class SliderInstagramIndicatorView extends FrameLayout {
         mPagerIndicator = wrapperView.findViewById(R.id.pager_indicator);
     }
 
+    public void setOnItemClickListener(SliderPager.OnItemClickListener onItemClickListener) {
+        mSliderPager.setOnItemClickListener(onItemClickListener);
+    }
+
     public void setOnIndicatorClickListener(ViewPager.OnPageChangeListener listener) {
         mSliderPager.addOnPageChangeListener(listener);
 //        mPagerIndicator.setClickListener(listener);

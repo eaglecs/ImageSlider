@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.smarteist.autoimageslider.SliderInstagramIndicatorView;
+import com.smarteist.autoimageslider.SliderPager;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,7 +34,12 @@ public class MainActivity extends AppCompatActivity {
 //        sliderView.setSliderIndicatorRadius(10);
         sliderView.setCurrentPagePosition(0, false);
 //        sliderView.setPagerIndicatorVisibility(false);
-
+        sliderView.setOnItemClickListener(new SliderPager.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Log.d("onItemClick", position + "");
+            }
+        });
         sliderView.setOnIndicatorClickListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {

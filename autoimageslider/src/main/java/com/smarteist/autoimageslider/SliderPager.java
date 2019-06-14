@@ -2,21 +2,60 @@ package com.smarteist.autoimageslider;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
+import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Scroller;
+
 import androidx.viewpager.widget.ViewPager;
+
 import java.lang.reflect.Field;
 
 public class SliderPager extends ViewPager {
-
+    private OnItemClickListener mOnItemClickListener;
     public static final int DEFAULT_SCROLL_DURATION = 250;
 
-    public SliderPager (Context context) {
+    public SliderPager(Context context) {
         super(context);
+        setup();
     }
 
-    public SliderPager (Context context, AttributeSet attrs) {
+    public SliderPager(Context context, AttributeSet attrs) {
         super(context, attrs);
+        setup();
+    }
+
+    private void setup() {
+        final GestureDetector tapGestureDetector = new GestureDetector(getContext(), new TapGestureListener());
+
+        setOnTouchListener(new OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                tapGestureDetector.onTouchEvent(event);
+                return false;
+            }
+        });
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
+
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        mOnItemClickListener = onItemClickListener;
+    }
+
+    private class TapGestureListener extends GestureDetector.SimpleOnGestureListener {
+
+        @Override
+        public boolean onSingleTapConfirmed(MotionEvent e) {
+            if (mOnItemClickListener != null) {
+                mOnItemClickListener.onItemClick(getCurrentItem());
+            }
+            return true;
+        }
     }
 
     public void setScrollDuration(int millis) {
