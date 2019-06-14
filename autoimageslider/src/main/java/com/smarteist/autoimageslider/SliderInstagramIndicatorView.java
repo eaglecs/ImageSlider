@@ -30,10 +30,10 @@ import com.smarteist.autoimageslider.Transformations.TossTransformation;
 import com.smarteist.autoimageslider.Transformations.VerticalFlipTransformation;
 import com.smarteist.autoimageslider.Transformations.VerticalShutTransformation;
 import com.smarteist.autoimageslider.Transformations.ZoomOutTransformation;
+import com.smarteist.autoimageslider.scrollingpagerindicator.ScrollingPagerIndicator;
 
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-import ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator;
 
 public class SliderInstagramIndicatorView extends FrameLayout {
 

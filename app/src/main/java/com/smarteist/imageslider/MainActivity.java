@@ -3,15 +3,9 @@ package com.smarteist.imageslider;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Handler;
 
-import com.smarteist.autoimageslider.IndicatorAnimations;
-import com.smarteist.autoimageslider.IndicatorView.draw.controller.DrawController;
-import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderInstagramIndicatorView;
-import com.smarteist.autoimageslider.SliderView;
 
 public class MainActivity extends AppCompatActivity {
 

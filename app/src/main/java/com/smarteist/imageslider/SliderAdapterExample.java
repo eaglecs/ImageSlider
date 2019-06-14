@@ -9,9 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.RequestBuilder;
-import com.bumptech.glide.RequestManager;
-import com.bumptech.glide.manager.RequestManagerRetriever;
 import com.smarteist.autoimageslider.SliderViewAdapter;
 
 public class SliderAdapterExample extends

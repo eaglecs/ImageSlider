@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:overScrollMode="never" />
 
-    <ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
+    <com.smarteist.autoimageslider.scrollingpagerindicator.ScrollingPagerIndicator
         android:id="@+id/pager_indicator"
         app:spi_dotSelectedColor="#3973b6"
         app:spi_dotColor="#ffffffff"
