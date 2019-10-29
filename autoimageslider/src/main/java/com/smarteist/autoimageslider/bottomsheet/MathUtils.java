@@ -1,4 +1,4 @@
-package com.bottomsheet;
+package com.smarteist.autoimageslider.bottomsheet;
 
 /**
  * Created by fedor on 21.03.2017.

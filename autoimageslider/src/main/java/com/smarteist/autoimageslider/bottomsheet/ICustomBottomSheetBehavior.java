@@ -1,4 +1,4 @@
-package com.bottomsheet;
+package com.smarteist.autoimageslider.bottomsheet;
 
 import android.view.View;
 
